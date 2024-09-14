@@ -1,0 +1,5 @@
+{
+    "dataworkspace.excludedProjects": [
+        "nest-api/nest-api.sqlproj"
+    ]
+}

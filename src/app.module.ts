@@ -7,6 +7,7 @@ import { DataSource } from 'typeorm';
 import { CategoryEntity } from './entities/category.entity';
 import { AccountsEntity } from './entities/accounts.entity';
 import { ProductEntity } from './entities/product.entity';
+import { AppGateway } from './app/app.gateway';
 
 @Module({
   // imports: [ProductsModule, TypeOrmModule.forRoot(dataSourceOptions)],
@@ -25,7 +26,7 @@ import { ProductEntity } from './entities/product.entity';
     }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, AppGateway],
 })
 export class AppModule {
   constructor(private dataSource: DataSource) {}
